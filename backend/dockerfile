@@ -1,0 +1,14 @@
+FROM node:lts-alpine3.16
+
+#Set Wokrdir and Copy Context (Copy As User node: Security Best Practice not using Root user)
+WORKDIR /usr/src/app
+COPY --chown=node:node package.json .
+#Install Package Dependency
+RUN npm install --quiet
+#Copy Context To Docker Image As node user
+COPY --chown=node:node . .
+USER node
+#Expose Image Port
+EXPOSE 5000
+#Start Backend Server
+CMD ["npm","run","server"]

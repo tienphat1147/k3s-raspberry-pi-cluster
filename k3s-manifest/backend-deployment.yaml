@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: proshop-backend
+  namespace: ecommerce
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: proshop-backend
+  template:
+    metadata:
+      labels:
+        app: proshop-backend
+    spec:
+      nodeSelector:
+        role: worker
+      containers:
+      - name: backend
+        image: tienphat1147/proshop-backend:v1
+        ports:
+        - containerPort: 5000
+        env:
+        - name: MONGO_URI
+          value: "mongodb://mongodb:27017/proshop"
+        - name: NODE_ENV
+          value: "production"
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "256Mi"
+          limits:
+            cpu: "1000m"
+            memory: "512Mi"
+
+
