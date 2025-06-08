@@ -1,5 +1,12 @@
 # k3s-raspberry-pi-cluster
-Deploying a lightweight K3s cluster on Raspberry Pi and running a fullstack eCommerce web app (ProShop) with React frontend, Express backend, and MongoDB. Manual YAML-based deployment without scripts. Designed for education and demonstration purposes.
+Deploying a lightweight K3s cluster on Raspberry Pi and running a fullstack eCommerce web app (ProShop) with React frontend, Express backend, and MongoDB.
+
+This project demonstrates manual YAML-based deployment on K3s without using Helm or automation scripts. It is designed for educational and demonstration purposes, including:
+
+- Understanding Kubernetes resource configuration and deployment.
+- Practicing image building, service exposure, and Ingress setup.
+- Testing scalability using **Horizontal Pod Autoscaler (HPA)** under high load with **Locust**.
+
 
 # ProShop Deployment Guide on K3s
 
