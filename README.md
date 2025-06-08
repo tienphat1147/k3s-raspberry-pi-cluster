@@ -82,4 +82,5 @@ For example: http://proshop.group14.vn
 
 ### 🖼️ Web UI after deployment
 
-![ProShop UI](assets/Screenshot 2025-06-08 165329.png)
+![Screenshot 2025-06-08 165329](https://github.com/user-attachments/assets/e2079327-5104-4152-ac74-e4ffe259d920)
+
