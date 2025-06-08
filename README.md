@@ -56,26 +56,26 @@ Check ingress:
 ```bash
 kubectl get ingress -n ecommerce-web
 ```
-## 4. Seed initial data into MongoDB
+## 🚀 4. Seed initial data into MongoDB
 
 To populate the database, exec into the backend pod and run the seeder script:
-### 1. Find the backend pod name:
+### Step 1. Find the backend pod name:
 ```bash
 kubectl get pods -n ecommerce -l app=proshop-backend -o jsonpath="{.items[0].metadata.name}"
 ```
-### 2. Exec into the backend pod (replace <backend-pod-name> with the actual pod name):
+### Step 2. Exec into the backend pod (replace <backend-pod-name> with the actual pod name):
 ```bash
 kubectl exec -it -n ecommerce <backend-pod-name> -- /bin/sh
 ```
-### 3. Run the seeder script inside the pod:
+### Step 3. Run the seeder script inside the pod:
 ```bash
 node seeder.js
 ```
-### 4. Exit the pod shell after seeding is complete:
+### Step 4. Exit the pod shell after seeding is complete:
 ```bash
 exit
 ```
-## 5. Access the ProShop Web App
+## 🚀 5. Access the ProShop Web App
 Once all services are up and running, and the Ingress has been applied, you can access the application using the domain configured in your `ingress.yaml`.
 
 For example: http://proshop.group14.vn
