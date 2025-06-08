@@ -5,6 +5,18 @@ Deploying a lightweight K3s cluster on Raspberry Pi and running a fullstack eCom
 
 ---
 
+## 📚 Table of Contents
+
+- [Prerequisites](#-prerequisites)
+- [1. Build Docker Images](#-1-build-docker-images)
+- [2. Deploy to K3s Cluster](#-2-deploy-to-k3s-cluster)
+- [3. Verify the deployment](#step-3-verify-the-deployment)
+- [4. Seed initial data into MongoDB](#-4-seed-initial-data-into-mongodb)
+- [5. Access the ProShop Web App](#-5-access-the-proshop-web-app)
+- [6. (Optional) Test HPA with Load Testing](#-6-optional-test-hpa-with-load-testing)
+
+---
+
 ## 📋 Prerequisites
 
 - A running **K3s cluster** with `kubectl` properly configured.
@@ -83,4 +95,22 @@ For example: http://proshop.group14.vn
 ### 🖼️ Web UI after deployment
 
 ![Screenshot 2025-06-08 165329](https://github.com/user-attachments/assets/e2079327-5104-4152-ac74-e4ffe259d920)
+
+## 🚀 6. (Optional) Test HPA with Load Testing
+
+### Step 1: Apply HPA configuration
+```bash
+kubectl apply -f hpa-backend.yaml -n ecommerce-web
+```
+### Step 2: Verify HPA status
+```bash
+kubectl get hpa -n ecommerce-web
+```
+### Step 3: Generate load using Locust
+You can run Locust locally or inside a pod. Here's an example using local mode:
+
+```bash
+locust -f locustfile.py --host http://<your-backend-service>
+```
+You can create a locustfile.py to simulate multiple requests. Watch how HPA scales the pods dynamically.
 
