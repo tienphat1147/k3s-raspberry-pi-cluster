@@ -80,4 +80,6 @@ Once all services are up and running, and the Ingress has been applied, you can 
 
 For example: http://proshop.group14.vn
 
+### 🖼️ Web UI after deployment
 
+![ProShop UI](assets/Screenshot 2025-06-08 165329.png)
