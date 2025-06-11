@@ -17,10 +17,10 @@ This project demonstrates manual YAML-based deployment on K3s without using Helm
 - [📋 Prerequisites](#-prerequisites)
 - [🧭 System Architecture Overview](#system-architecture-overview)
 - [🐳 1. Build Docker Images](#1-build-docker-images)
-- [🚀 2. Deploy to K3s Cluster](#2-deploy-to-k3s-cluster)
-- [🍃 3. Seed initial data into MongoDB](#3-seed-initial-data-into-mongodb)
-- [🌐 4. Access the ProShop Web App](#4-access-the-proshop-web-app)
-- [🚀 5. Test HPA with Load Testing](#5-test-hpa-with-load-testing)
+- [🚀 2. Deploy to K3s Cluster](#--2-deploy-to-k3s-cluster)
+- [🍃 3. Seed initial data into MongoDB](#-3-seed-initial-data-into-mongodb)
+- [🌐 4. Access the ProShop Web App](#-4-access-the-proshop-web-app)
+- [🚀 5. Test HPA with Load Testing](#-5-test-hpa-with-load-testing)
 
 
 
