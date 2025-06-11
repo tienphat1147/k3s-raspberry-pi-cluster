@@ -14,25 +14,16 @@ This project demonstrates manual YAML-based deployment on K3s without using Helm
 
 ## 📚 Table of Contents
 
-- [📋 Prerequisites](#-prerequisites)  
-- [🧭 System Architecture Overview](#system-architecture-overview)  
-- [🐳 1: Build Docker Images](#-1-build-docker-images)  
-  - [📦 Backend](#backend)  
-  - [🎨 Frontend](#frontend)  
-- [🚀 2: Deploy to K3s Cluster](#-2-deploy-to-k3s-cluster)  
-  - [📂 Create Namespace (Optional)](#step-1-create-namespace-optional)  
-  - [📥 Apply Kubernetes Manifests](#step-2-deploy-proshop-on-k3s)  
-  - [🔎 Verify Deployment](#step-3-verify-the-deployment)  
-- [🍃 3: Seed Initial Data into MongoDB](#-3-seed-initial-data-into-mongodb)  
-- [🌐 4: Access the ProShop Web App](#-4-access-the-proshop-web-app)  
-  - [🖼️ Web UI Screenshot](#️-web-ui-after-deployment)  
-  - [🛣️ Ingress Networking Flow](#️-ingress-networking-flow-in-k3s)  
-- [🚀 5: Test HPA with Load Testing](#-5-test-hpa-with-load-testing)  
-  - [⚙️ Apply HPA Config](#step-1-apply-hpa-configuration)  
-  - [🔍 Verify HPA](#step-2-verify-hpa-status)  
-  - [🧪 Load Testing with Locust](#step-3-load-testing-with-locust)  
-- [📌 Cluster High Availability Notes](#-cluster-high-availability-notes)  
-- [📜 License & Credits](#-license--credits)
+- [📋 Prerequisites](#-prerequisites)
+- [🧭 System Architecture Overview](#system-architecture-overview)
+- [🐳 1. Build Docker Images](#1-build-docker-images)
+- [🚀 2. Deploy to K3s Cluster](#2-deploy-to-k3s-cluster)
+- [🍃 3. Seed initial data into MongoDB](#3-seed-initial-data-into-mongodb)
+- [🌐 4. Access the ProShop Web App](#4-access-the-proshop-web-app)
+- [🚀 5. Test HPA with Load Testing](#5-test-hpa-with-load-testing)
+
+
+
 
 ---
 ## System Architecture Overview
